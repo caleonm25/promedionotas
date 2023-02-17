@@ -10,25 +10,25 @@ namespace promedionotas
     {
         static void Main(string[] args)
         {
-            int nota1, nota2, nota3;
+            double nota1, nota2, nota3, promedio;
 
             Console.Write("Ingrese la primera nota: ");
-            nota1 = int.Parse(Console.ReadLine());
+            nota1 = double.Parse(Console.ReadLine());
             Console.Write("Ingrese la segunda nota: ");
-            nota2 = int.Parse(Console.ReadLine());
+            nota2 = double.Parse(Console.ReadLine());
             Console.Write("Ingrese la tercera nota: ");
-            nota3 = int.Parse(Console.ReadLine());
+            nota3 = double.Parse(Console.ReadLine());
 
-            double promedio = Convert.ToDouble(nota1 + nota2 + nota3) / 3;
+            promedio = Convert.ToDouble(nota1 + nota2 + nota3) / 3;
             promedio = Math.Round(promedio, 2);
 
-            if (promedio >= 35)
+            if (promedio < 35)
             {
-                Console.Write("Su nota es: " + promedio + ", usted aprobo.");
+                Console.Write("Su nota es: " + promedio + " usted reprobo.");
             }
             else 
             {
-                Console.Write("Su nota es: " + promedio + ", usted reprobo.");
+                Console.Write("Su nota es: " + promedio + " usted aprobo.");
 
             }
             Console.ReadKey();
